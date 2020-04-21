@@ -7,5 +7,11 @@
 
 <h1> Commands to run the code on windows </h1>
 <p>Assuming you have already installed all the requirements:</p>
+
+<p>Clone the project by selecting right branch and run following commands:</p>
 <p>Come to the root directory</p>
-<p>python manage.py runserver</p>
+```
+python3 manage.py makemigrations accounts
+python3 manage.py migrate
+python3 manage.py runserver
+```
