@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts.apps.AccountsConfig', #new
     'posts.apps.PostsConfig', #new2 for pictures
+    'sendemail.apps.SendemailConfig',#To send emails from user
 ]
 
 MIDDLEWARE = [

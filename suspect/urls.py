@@ -26,6 +26,7 @@ urlpatterns = [
     path('accounts/',include('django.contrib.auth.urls')), #new
     path('',TemplateView.as_view(template_name='home.html'), name = 'home'), #new2
     path('',include('posts.urls')), #new4,
+    path('',include('sendemail.urls')),
 ]
 
 if settings.DEBUG: # new

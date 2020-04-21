@@ -7,4 +7,4 @@ from .models import Post
 
 class PostsPageView(LoginRequiredMixin, ListView):
     model = Post
-    template_name = 'posts.html'
+    template_name = 'posts/posts.html'
