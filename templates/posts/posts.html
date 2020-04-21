@@ -1,11 +1,16 @@
 <!-- templates/home.html -->
-{% extends 'base.html' %}
+
 {% block content %}
+
 <h1>List of Suspects</h1>
 <ul>
   {% for post in object_list %}
-    <h2>{{ post.title }}</h2>
-    <img src="{{ post.cover.url}}" alt="{{ post.title }}" alt="Hello">
+  <h2>{{ post.title }}</h2>
+  <img src="{{ post.cover.url}}" alt="{{ post.title }}" alt="Hello">
   {% endfor %}
+
+
 </ul>
+{% csrf_token %}
+<button onclick="location.href='http://127.0.0.1:8000/suspectnumber/'">Click here to enter the suspect number</button>
 {% endblock %}

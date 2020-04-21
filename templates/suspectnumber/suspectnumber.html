@@ -1,0 +1,12 @@
+<!-- templates/email.html -->
+{% block content %}
+<h1>Enter details about the suspect</h1>
+<h2>Please enter some details about yourself for confirmation.</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
+{% endblock %}

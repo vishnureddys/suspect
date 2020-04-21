@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig', #new
     'posts.apps.PostsConfig', #new2 for pictures
     'sendemail.apps.SendemailConfig',#To send emails from user
+    'suspectnumber.apps.SuspectnumberConfig',#To accept the suspect from the list of suspects
 ]
 
 MIDDLEWARE = [
