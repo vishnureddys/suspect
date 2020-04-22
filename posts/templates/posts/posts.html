@@ -1,13 +1,32 @@
 <!-- templates/home.html -->
 {% extends 'home/base.html' %}
 {% block content %}
+<style>
+  ul{
+    display: inline;
+  }
+  .column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
 <h1>List of Suspects</h1>
-<ul>
+<div class="row">
   {% for post in object_list %}
+  <div class="column">
     <h2>{{ post.title }}</h2>
     <img src="{{ post.cover.url}}" alt="{{ post.title }}" alt="Hello">
+  </div>
   {% endfor %}
-</ul>
+</div>
 {% csrf_token %}
 <button onclick="location.href='http://127.0.0.1:8000/suspectnumber/'">Click here to enter the suspect number</button>
 {% endblock %}
