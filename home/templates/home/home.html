@@ -14,8 +14,10 @@
 	{% endif %}
 	{% if user.is_authenticated %}
 	  Hi {{ user.username }}!
-	  <p><a href="{% url 'logout' %}">logout</a></p>
-	  <p><a href="{% url 'password_reset' %}">reset password</a></p>
+	  <!-- <p><a href="{% url 'logout' %}">logout</a></p> -->
+	  <p></p>
+	  <p>Click <a href="{% url 'password_reset' %}">here</a> to reset your password.</p>
+	  <p>If you have already been contacted by the police, please proceed to the link mentioned by them.</p>
 	{% endif %}
 </div>
 {% endblock %}
