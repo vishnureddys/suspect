@@ -1,0 +1,36 @@
+<!-- templates/email.html -->
+{% extends 'home/base.html' %}
+{% block content %}
+<style>
+  input, select,textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  p{
+    font-size: large;
+  }
+  button[type=submit] {
+    width: 100%;
+    background-color:aqua;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+</style>
+<h1>Contact Us:</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
+{% endblock %}

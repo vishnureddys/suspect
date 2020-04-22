@@ -1,0 +1,21 @@
+<!-- templates/home.html -->
+{% extends 'home/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container">
+	{% if not user.is_authenticated %}
+	<h1>Welcome to the Suspect Detection Portal</h1>
+	<big>This is a feature currently under development wherein citizens can report suspects anonymously.</big>
+	<br><br>
+	<p>Please <a href="{% url 'register' %}" >register</a> if you wish to report a crime.</p>
+	<p>PLease <a href="{% url 'login' %}">login</a> if you already have an account.</p>
+	{% endif %}
+	{% if user.is_authenticated %}
+	  Hi {{ user.username }}!
+	  <p><a href="{% url 'logout' %}">logout</a></p>
+	  <p><a href="{% url 'password_reset' %}">reset password</a></p>
+	{% endif %}
+</div>
+{% endblock %}

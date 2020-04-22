@@ -19,14 +19,18 @@ from django.urls import path, include#new
 from django.views.generic.base import TemplateView #new2
 from django.conf.urls.static import static #new4
 from posts import views
+from accounts import views as accounts_views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('register/', accounts_views.register, name = 'register'),
     path('accounts/',include('accounts.urls')), #new3
     path('accounts/',include('django.contrib.auth.urls')), #new
-    path('',TemplateView.as_view(template_name='home.html'), name = 'home'), #new2
+    path('',TemplateView.as_view(template_name='home/home.html'), name = 'home'), #new2
     path('',include('posts.urls')), #new4,
     path('',include('sendemail.urls')),
+    path('login/', auth_views.LoginView.as_view(template_name='accounts/login.html',redirect_authenticated_user=True), name='login'),
     path('',include('suspectnumber.urls')),
 ]
 

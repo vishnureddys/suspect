@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig', #new
     'posts.apps.PostsConfig', #new2 for pictures
     'sendemail.apps.SendemailConfig',#To send emails from user
-    'suspectnumber.apps.SuspectnumberConfig',#To accept the suspect from the list of suspects
+    'home.apps.HomeConfig',
+    'phonenumber_field',
+    'crispy_forms',
+    'suspectnumber.apps.SuspectnumberConfig',
 ]
 
 MIDDLEWARE = [
@@ -123,6 +126,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'
 LOGOUT_REDIRECT_URL = 'home'
 
 # config/settings.py
@@ -130,3 +134,7 @@ EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+PHONENUMBER_DEFAULT_REGION = 'IN'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
