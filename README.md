@@ -16,8 +16,3 @@
 
 <p>Clone the project by selecting right branch and run following commands:</p>
 <p>Come to the root directory and type the following commands:</p>
-```
-python3 manage.py makemigrations accounts
-python3 manage.py migrate
-python3 manage.py runserver
-```
