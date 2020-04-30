@@ -7,12 +7,7 @@
 
 <p>This makes use of Python3, Django and react(still implementing).</p>
 
-<h1> Commands to run the code on windows: </h1>
-<p>Assuming you have already installed all the requirements and know how to create a virtual environment:</p>
-1.python
-2.django
-3.pillow
-
-
-<p>Clone the project by selecting right branch and run following commands:</p>
-<p>Come to the root directory and type the following commands:</p>
+<h1> Commands to run the code</h1>
+<p>Come to the suspect directory and type the following commands:</p>
+<p>Activate a virtual environment.</p>
+$ python -m pip install Django
