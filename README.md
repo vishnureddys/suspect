@@ -10,20 +10,17 @@
 <h1> Commands to run the code: </h1>
 <p>Come to the suspect directory.</p>
 <p>Activate a virtual environment and then type the following commands</p>
-```
+
 $ python -m pip install Django
 $ pip install django-crispy-forms
 $ pip install django-phonenumber-field[phonenumberslite]
-```
 <br>
 You could be asked to install Pillow
-```
-$ python -m pip install Pillow
+```$ python -m pip install Pillow
 ```
 <br>
 Now you can run the server:
-```
-$ python manage.py migrate
+```$ python manage.py migrate
 $ python manage.py runserver
 ```
 <br>
