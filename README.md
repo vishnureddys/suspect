@@ -15,16 +15,19 @@ $ python -m pip install Django
 $ pip install django-crispy-forms
 $ pip install django-phonenumber-field[phonenumberslite]
 ```
+<br>
 You could be asked to install Pillow
 ```
 $ python -m pip install Pillow
 ```
+<br>
 Now you can run the server:
 ```
 $ python manage.py migrate
 $ python manage.py runserver
 ```
+<br>
 Now head over to http://127.0.0.1:8000/ to view the website.
-
+<br>
 After logging in you can visit http://127.0.0.1:8000/posts to look at the suspects and identify the criminal.
 You can go to http://127.0.0.1:8000/admin to go to the admin page.
